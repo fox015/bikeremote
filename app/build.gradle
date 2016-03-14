@@ -23,6 +23,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.07'
+    compile 'com.jakewharton:butterknife:7.0.1'
 
     testCompile 'junit:junit:4.12'
 }

@@ -1,7 +1,11 @@
 package io.github.fox015.bikeremote;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.OnClick;
 import ioio.lib.api.DigitalOutput;
 import ioio.lib.api.IOIO;
 import ioio.lib.api.exception.ConnectionLostException;
@@ -9,6 +13,9 @@ import ioio.lib.util.IOIOLooper;
 import ioio.lib.util.android.IOIOActivity;
 
 public class MainActivity extends IOIOActivity {
+
+    @Bind(R.id.go)
+    Button mGoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +55,12 @@ public class MainActivity extends IOIOActivity {
 
             }
         };
+    }
+
+    @OnClick
+    void clickGo() {
+        // Nothing for now.
+        Toast.makeText(this, "GO!", Toast.LENGTH_SHORT).show();
     }
 
 }
