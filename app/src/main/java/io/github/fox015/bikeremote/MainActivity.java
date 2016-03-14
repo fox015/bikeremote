@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ioio.lib.api.DigitalOutput;
 import ioio.lib.api.IOIO;
@@ -21,6 +22,8 @@ public class MainActivity extends IOIOActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
     }
 
     @Override
@@ -57,7 +60,7 @@ public class MainActivity extends IOIOActivity {
         };
     }
 
-    @OnClick
+    @OnClick(R.id.go)
     void clickGo() {
         // Nothing for now.
         Toast.makeText(this, "GO!", Toast.LENGTH_SHORT).show();
